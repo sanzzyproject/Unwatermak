@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Watermark Remover</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="container">
+        <header>
+            <div class="badge">AI Powered V2.0</div>
+            <h1>Magic Remover</h1>
+            <p>Hapus watermark otomatis dalam hitungan detik.</p>
+        </header>
+
+        <main>
+            <div class="upload-zone" id="dropZone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="icon-container">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <h3>Upload Gambar</h3>
+                <p>Klik atau drop file di sini (JPG/PNG/WEBP)</p>
+            </div>
+
+            <div class="loading-state hidden" id="loadingState">
+                <div class="spinner"></div>
+                <p id="loadingText">Sedang memproses...</p>
+            </div>
+
+            <div class="result-area hidden" id="resultArea">
+                <div class="image-wrapper">
+                    <div class="card">
+                        <span class="label original">Original</span>
+                        <img id="imgOriginal" src="" alt="Original">
+                    </div>
+                    <div class="card">
+                        <span class="label result">Clean</span>
+                        <img id="imgResult" src="" alt="Result">
+                        <a id="downloadBtn" href="#" target="_blank" class="download-btn">
+                            <i class="fa-solid fa-download"></i> Download HD
+                        </a>
+                    </div>
+                </div>
+                <button class="reset-btn" onclick="location.reload()">Proses Gambar Lain</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 AI Tools. Built with Node.js & Vercel.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
