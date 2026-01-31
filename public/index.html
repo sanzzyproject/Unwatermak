@@ -3,59 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Watermark Remover</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Penghapus Watermark AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="background-glow"></div>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" alt="Logo" class="nav-logo">
+                <span>Watermark Remover</span>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-btn">Bahasa Indonesia <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
 
-    <div class="container">
-        <header>
-            <div class="badge">AI Powered V2.0</div>
-            <h1>Magic Remover</h1>
-            <p>Hapus watermark otomatis dalam hitungan detik.</p>
+    <main class="container main-content">
+        <header class="hero-header">
+            <h1>Penghapus Watermark AI</h1>
+            <p class="hero-subtitle">Hapus watermark, logo, dan noda dengan mudah menggunakan teknologi canggih bertenaga AI kami.</p>
         </header>
 
-        <main>
-            <div class="upload-zone" id="dropZone">
-                <input type="file" id="fileInput" accept="image/*" hidden>
-                <div class="icon-container">
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
+        <div class="banner-container">
+            <img src="https://cdn.odzre.my.id/hys.webp" alt="Contoh Penghapusan Watermark" class="banner-img">
+        </div>
+
+        <section class="upload-section">
+            <div class="upload-box-container" id="dropZone">
+                <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg" hidden>
+                <div class="upload-content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Upload Icon" class="upload-icon-img">
+                    
+                    <button class="btn-upload-trigger">
+                        <i class="fa-solid fa-upload"></i> Klik di sini untuk mengunggah
+                    </button>
+                    
+                    <p class="upload-info">Dukungan: JPG, JPEG, PNG | Ukuran file maksimum: 10 MB</p>
                 </div>
-                <h3>Upload Gambar</h3>
-                <p>Klik atau drop file di sini (JPG/PNG/WEBP)</p>
             </div>
 
             <div class="loading-state hidden" id="loadingState">
                 <div class="spinner"></div>
-                <p id="loadingText">Sedang memproses...</p>
+                <p>Sedang memproses gambar...</p>
             </div>
 
             <div class="result-area hidden" id="resultArea">
-                <div class="image-wrapper">
-                    <div class="card">
-                        <span class="label original">Original</span>
+                <h3>Hasil Gambar</h3>
+                <div class="image-comparison">
+                    <div class="img-card card-original">
+                        <span>Original</span>
                         <img id="imgOriginal" src="" alt="Original">
                     </div>
-                    <div class="card">
-                        <span class="label result">Clean</span>
+                    <div class="img-card card-result">
+                        <span>Tanpa Watermark</span>
                         <img id="imgResult" src="" alt="Result">
-                        <a id="downloadBtn" href="#" target="_blank" class="download-btn">
-                            <i class="fa-solid fa-download"></i> Download HD
-                        </a>
                     </div>
                 </div>
-                <button class="reset-btn" onclick="location.reload()">Proses Gambar Lain</button>
+                <a id="downloadBtn" href="#" target="_blank" class="btn-download-result">
+                    <i class="fa-solid fa-download"></i> Unduh Gambar HD
+                </a>
+                <button class="btn-reset" onclick="location.reload()">Coba gambar lain</button>
             </div>
-        </main>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 AI Tools. Built with Node.js & Vercel.</p>
-        </footer>
-    </div>
+        <section class="features-section">
+            <h2>Mengapa Memilih Kami?</h2>
+            
+            <div class="feature-card">
+                <div class="icon-wrapper purple-light">
+                    <i class="fa-solid fa-shield-halved" style="color: #8b5cf6;"></i>
+                </div>
+                <h3>Keamanan Data Terjamin</h3>
+                <p>Privasi Anda adalah prioritas utama kami. Kami memastikan bahwa semua gambar yang diunggah diproses dengan aman, dan tidak ada data yang disimpan di server kami.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-wrapper purple-light">
+                    <i class="fa-solid fa-dollar-sign" style="color: #8b5cf6;"></i>
+                </div>
+                <h3>Gratis untuk Dicoba</h3>
+                <p>Kami menawarkan penggunaan gratis untuk menguji penghapus watermark AI kami tanpa biaya di muka. Paket gratis kami memastikan Anda dapat memulai segera.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon-wrapper purple-light">
+                    <i class="fa-solid fa-wand-magic-sparkles" style="color: #8b5cf6;"></i>
+                </div>
+                <h3>Mempertahankan Kualitas Gambar</h3>
+                <p>Menggunakan teknologi AI canggih untuk menghapus watermark tanpa mengorbankan kualitas foto Anda. Gambar tetap tajam dan cerah setelah pemrosesan.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>SANN404 FORUM</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
